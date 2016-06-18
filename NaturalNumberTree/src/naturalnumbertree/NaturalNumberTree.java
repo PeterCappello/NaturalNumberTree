@@ -61,8 +61,10 @@ public class NaturalNumberTree
     @Override
     public String toString()
     {
-        // TODO: implement.
+        // TODO: implement. Do recursive indentation.
         StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append( n );
+        subtrees.forEach( NaturalNumberTree::toString );
         return stringBuilder.toString();
     }
     
