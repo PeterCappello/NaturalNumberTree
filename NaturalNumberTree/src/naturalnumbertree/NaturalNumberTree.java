@@ -59,12 +59,14 @@ public class NaturalNumberTree
     }
     
     @Override
-    public String toString()
+    public String toString() { return viewAsString( n, "" ); }
+    
+    private String viewAsString( int n, String pad )
     {
-        // TODO: implement. Do recursive indentation.
+        // Use in concert with to String to indent recursively.
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append( n );
-        subtrees.forEach( NaturalNumberTree::toString );
+        stringBuilder.append( pad ).append( n ).append( '\n' );
+        subtrees.forEach( factor -> stringBuilder.append( viewAsString( factor.n, pad + "    " ) ) );
         return stringBuilder.toString();
     }
     
