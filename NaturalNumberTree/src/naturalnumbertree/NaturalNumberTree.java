@@ -66,7 +66,7 @@ public class NaturalNumberTree
         // Use in concert with to String to indent recursively.
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append( pad ).append( n ).append( '\n' );
-        subtrees.forEach( factor -> stringBuilder.append( viewAsString( factor.n, pad + "    " ) ) );
+        subtrees.forEach( subtree -> stringBuilder.append( viewAsString( subtree.n, pad + "    " ) ) );
         return stringBuilder.toString();
     }
     
