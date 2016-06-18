@@ -40,13 +40,13 @@ public class NaturalNumberTree
         this.n = n; 
         if ( n != 1 )
         {
-            factors( n ).forEach( factor  -> 
-                    subtrees.add( new NaturalNumberTree( rank( factor ) ) )
+            primeFactors( n ).forEach( primeFactor  -> 
+                    subtrees.add( new NaturalNumberTree( rank( primeFactor ) ) )
             );
         }
     }
     
-    private List<Integer> factors( int n )
+    private List<Integer> primeFactors( int n )
     {
         // TODO: implement.
         return new ArrayList<>();
